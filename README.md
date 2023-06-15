@@ -13,7 +13,7 @@ https://drive.google.com/drive/folders/1n2dVyCF6YM4A4n3SFHxl-CO4Jp54MRs7?usp=sha
 ## Images
 
 ### Presentation
-![image](https://github.com/adonisdario/meuscout/assets/43732491/79bea4c2-c4c5-4a33-8bf8-a0bb9c1b5277)
+![image](https://github.com/adonisdario/meuscout/assets/43732491/79bea4c2-c4c5-4a33-8bf8-a0bb9c1b5277) ![image](https://github.com/adonisdario/meuscout/assets/43732491/155da217-6378-4762-87b3-11da8ce2744a)
 
 List of Matches
 ![image](https://github.com/adonisdario/meuscout/assets/43732491/155da217-6378-4762-87b3-11da8ce2744a)
