@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Cor_Acentuada"
+    android:orientation="vertical"
+    tools:context=".fragments.RelatorioFragment">
+
+    <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="5dp"
+        app:mcv_selectionColor="@color/Cor_Primaria"
+        app:mcv_showOtherDates="all"
+        app:mcv_tileSize="50dp"
+        app:mcv_tileWidth="match_parent">
+
+    </com.prolificinteractive.materialcalendarview.MaterialCalendarView>
+
+    <FrameLayout
+        android:id="@+id/child_fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

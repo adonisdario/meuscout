@@ -1,0 +1,129 @@
+<resources>
+    <string name="app_name">Meu Scout</string>
+
+    <!-- Apresentação -->
+    <string name="txt_slide_1_titulo1">Bem vindo ao</string>
+    <string name="txt_slide_1_titulo2">Meu Scout!</string>
+    <string name="txt_slide_1_subTitulo1">Registre as estatísticas do seu jogo!</string>
+    <string name="txt_slide_2_titulo">Defina Metas!</string>
+    <string name="txt_slide_3_titulo">Veja a sua evolução!</string>
+
+    <!-- Login -->
+    <string name="txt_login_login">Login</string>
+    <string name="txt_login_senha">Senha</string>
+    <string name="txt_login_btnEntrar">Entrar</string>
+    <string name="txt_login_ultimoLogin">Entrar com o usuário:</string>
+    <string name="txt_login_usuario">login do usuario</string>
+
+    <!-- Cadastro de Usuario -->
+    <string name="txt_cadastro_titulo">Cadastro</string>
+    <string name="txt_cadastro_email">Email</string>
+    <string name="txt_cadastro_senha">Senha</string>
+    <string name="txt_cadastro_nome">Nome Completo</string>
+    <string name="txt_cadastro_dataNascimento">Data de Nascimento</string>
+    <string name="txt_cadastro_cidade">Cidade</string>
+    <string name="txt_cadastro_posicao">Posição preferida</string>
+    <string name="txt_cadastro_perna">Perna dominante</string>
+    <string name="txt_cadastro_time">Time em que joga</string>
+    <string name="txt_cadastro_sigla">Sigla do time ex: (ABC)</string>
+    <string name="txt_cadastro_btnCadastrar">Cadastrar</string>
+
+    <!-- Listagem de Partidas -->
+    <string name="txt_lista_titulo">Lista de Partidas</string>
+
+    <!-- Perfil -->
+    <string name="txt_perfil_titulo">Perfil</string>
+
+    <!-- Times -->
+    <string name="txt_time_nomeTime">Nome do Time</string>
+    <string name="txt_time_siglaTime">Sigla do Time</string>
+    <string name="txt_time_registro">Time</string>
+
+    <!-- Endereço -->
+    <string name="txt_endereco_nomeLocal">Nome do Local</string>
+    <string name="txt_endereco_endereco">Endereço</string>
+
+    <string name="pesquisar">Pesquisar</string>
+
+
+    <!-- Registro de Partidas -->
+    <string name="txt_partidaReg_titulo">Registrar Partida</string>
+    <string name="txt_partida_aba_stats">SCOUTS</string>
+    <string name="txt_partida_aba_infos">INFORMAÇÕES</string>
+    <string name="txt_partida_titulo">Partida</string>
+    <string name="txt_partida_gols">Gols</string>
+    <string name="txt_partida_golsSofridos">Gols Sofridos</string>
+    <string name="txt_partida_golspe">Esquerda</string>
+    <string name="txt_partida_golspd">Direita</string>
+    <string name="txt_partida_golsou">Outro</string>
+    <string name="txt_partida_golsca">Cabeça</string>
+    <string name="txt_partida_tipoGol">Tipo do Gol</string>
+    <string name="txt_partida_assistencias">Assistências</string>
+    <string name="txt_partida_posicao">Posição Jogada</string>
+    <string name="txt_partida_posicaosec">Posição Secundária</string>
+    <string name="txt_partida_defesas">Defesas</string>
+    <string name="txt_partida_golsConcedidos">Gols tomados</string>
+    <string name="txt_partida_finalizacoes">Finalizações</string>
+    <string name="txt_partida_finalCertas">Certas</string>
+    <string name="txt_partida_finalTrave">Trave</string>
+    <string name="txt_partida_finalErradas">Erradas</string>
+    <string name="txt_partida_finalBloq">Bloqueadas</string>
+    <string name="txt_partida_penaltisCertos">Certos</string>
+    <string name="txt_partida_penaltisErrados">Errados</string>
+    <string name="txt_partida_penaltis">Pênaltis Cobrados</string>
+    <string name="txt_partida_penaltisDef">Defendidos</string>
+    <string name="txt_partida_penaltisLev">Levou gol</string>
+    <string name="txt_partida_desarmes">Desarmes</string>
+    <string name="txt_partida_cortes">Cortes</string>
+    <string name="txt_partida_bloqueios">Bloqueios</string>
+    <string name="txt_partida_erros">Erros</string>
+    <string name="txt_partida_faltasReceb">Recebidas</string>
+    <string name="txt_partida_faltasComet">Cometidas</string>
+    <string name="txt_partida_cartoesAma">Amarelos</string>
+    <string name="txt_partida_cartoesVerm">Vermelhos</string>
+    <string name="txt_partida_cartoesAzul">Azuis</string>
+    <string name="txt_partida_notaIndividual">Individual</string>
+    <string name="txt_partida_notaPartida">Partida</string>
+    <string name="txt_partida_nomeLocal">Local</string>
+    <string name="txt_partida_endereco">Endereço</string>
+    <string name="txt_partida_data">Data da Partida</string>
+    <string name="txt_partida_tipoRegistro">Tipo de Registro</string>
+    <string name="txt_partida_duracaoPartida">Duração (min)</string>
+    <string name="txt_partida_qtdPartidas">Qtd de Partidas</string>
+    <string name="txt_partida_vitorias">Vitórias</string>
+    <string name="txt_partida_empates">Empates</string>
+    <string name="txt_partida_derrotas">Derrotas</string>
+    <string name="txt_partida_placar_casa">Seu Time</string>
+    <string name="txt_partida_placar_fora">Adversário</string>
+    <string name="txt_partida_seuTime">Seu Time</string>
+    <string name="txt_partida_outroTime">Adversário</string>
+    <string name="title_activity_menu_drawer">MenuDrawerActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="string_ok">Ok</string>
+    <string name="string_sim">Sim</string>
+    <string name="string_nao">Não</string>
+    <string name="string_cancelar">Cancelar</string>
+    <string name="string_open">open</string>
+    <string name="string_close">close</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- Relatório Mensal -->
+    <string name="txt_relatorio_titulo">Relatório Mensal</string>
+
+    <!-- Navegação -->
+    <string name="navigation_perfil">Perfil</string>
+    <string name="navigation_relatorio">Relatório Mensal</string>
+    <string name="navigation_lista">Lista de Partidas</string>
+    <string name="navigation_sair">Sair</string>
+
+    <string name="string_lista_vazia">Lista Vazia!</string>
+    <string name="txt_relatorio_aplicar">Aplicar</string>
+
+</resources>

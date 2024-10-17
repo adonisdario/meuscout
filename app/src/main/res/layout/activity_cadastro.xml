@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Cor_Primaria_Transp"
+    tools:context=".activities.CadastroActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/Cor_Primaria"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toTopOf="@+id/cardView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="Cadastro" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/layout_background_login"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="10dp"
+        app:cardMaxElevation="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar2">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/edt_perfil_email"
+                        style="@style/Orz_TextInputLayout"
+                        android:hint="@string/txt_cadastro_email"
+                        app:endIconDrawable="@drawable/ic_baseline_delete_24"
+                        app:endIconMode="clear_text">
+
+                        <com.google.android.material.textfield.TextInputEditText style="@style/Orz_TextInputEditText">
+
+                        </com.google.android.material.textfield.TextInputEditText>
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/edt_perfil_senha"
+                        style="@style/Orz_TextInputLayout"
+                        android:hint="@string/txt_cadastro_senha"
+                        app:endIconDrawable="@drawable/ic_baseline_delete_24"
+                        app:endIconMode="clear_text">
+
+                        <com.google.android.material.textfield.TextInputEditText style="@style/Orz_TextInputEditText">
+
+                        </com.google.android.material.textfield.TextInputEditText>
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/edt_perfil_nome"
+                        style="@style/Orz_TextInputLayout"
+                        android:hint="@string/txt_cadastro_nome"
+                        app:counterMaxLength="100"
+                        app:endIconDrawable="@drawable/ic_baseline_delete_24"
+                        app:endIconMode="clear_text">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            style="@style/Orz_TextInputEditText"
+                            android:inputType="textMultiLine|textCapSentences">
+
+                        </com.google.android.material.textfield.TextInputEditText>
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/edt_perfil_data"
+                            style="@style/Orz_TextInputLayout"
+                            android:layout_width="match_parent"
+                            android:hint="Data de Nascimento">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                style="@style/Orz_TextInputEditText"
+                                android:inputType="date">
+
+                            </com.google.android.material.textfield.TextInputEditText>
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/edt_perfil_cidade"
+                        style="@style/Orz_TextInputLayout"
+                        android:hint="@string/txt_cadastro_cidade"
+                        app:endIconDrawable="@drawable/ic_baseline_delete_24"
+                        app:endIconMode="clear_text">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            style="@style/Orz_TextInputEditText"
+                            android:inputType="textMultiLine|textCapSentences">
+
+                        </com.google.android.material.textfield.TextInputEditText>
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="9dp"
+                        android:layout_marginTop="15dp"
+                        android:text="@string/txt_cadastro_posicao"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <Spinner
+                        android:id="@+id/spn_perfil_posicao"
+                        style="@style/Orz_SelectionItemSpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="43dp"
+                        android:textAlignment="viewStart"></Spinner>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="9dp"
+                        android:layout_marginTop="15dp"
+                        android:text="@string/txt_cadastro_perna"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <Spinner
+                        android:id="@+id/spn_perfil_perna"
+                        style="@style/Orz_SelectionItemSpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="43dp"
+                        android:textAlignment="viewStart"></Spinner>
+
+                </LinearLayout>
+
+                <CheckBox
+                    android:id="@+id/chk_perfil_checkbox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Jogo em um time fixo" />
+
+                <LinearLayout
+                    android:id="@+id/layout_perfil_timeBanco"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/edt_perfil_timeBanco"
+                        style="@style/Orz_TextInputLayout"
+                        android:hint="@string/txt_cadastro_time"
+                        app:counterEnabled="false"
+                        app:endIconDrawable="@drawable/ic_baseline_delete_24"
+                        app:endIconMode="clear_text">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            style="@style/Orz_TextInputEditText"
+                            android:inputType="textMultiLine|textCapSentences">
+
+                        </com.google.android.material.textfield.TextInputEditText>
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_perfil_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:id="@+id/layout_perfil_nomeTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/edt_perfil_time"
+                            style="@style/Orz_TextInputLayout"
+                            android:hint="@string/txt_cadastro_time"
+                            app:counterEnabled="false"
+                            app:endIconDrawable="@drawable/ic_baseline_delete_24"
+                            app:endIconMode="clear_text">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                style="@style/Orz_TextInputEditText"
+                                android:inputType="textMultiLine|textCapSentences">
+
+                            </com.google.android.material.textfield.TextInputEditText>
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_perfil_sigla"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/edt_perfil_sigla"
+                            style="@style/Orz_TextInputLayout"
+                            android:hint="@string/txt_cadastro_sigla"
+                            app:counterEnabled="true"
+                            app:counterMaxLength="3"
+                            app:endIconDrawable="@drawable/ic_baseline_delete_24"
+                            app:endIconMode="clear_text">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                style="@style/Orz_TextInputEditText"
+                                android:inputType="textCapCharacters">
+
+                            </com.google.android.material.textfield.TextInputEditText>
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ProgressBar
+                        android:id="@+id/progress_cadastro"
+                        style="?android:attr/progressBarStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="4"
+                        android:indeterminate="true"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <Button
+                        android:id="@+id/btn_perfil_entrar"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/Cor_Acentuada"
+                        android:text="@string/txt_cadastro_btnCadastrar"
+                        android:textColor="@android:color/white"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone">
+
+                    <EditText
+                        android:id="@+id/getFoco"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                    </EditText>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

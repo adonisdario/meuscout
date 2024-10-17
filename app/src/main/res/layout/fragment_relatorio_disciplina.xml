@@ -1,0 +1,1181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.RelatorioGeralFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="1.5dp"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/layout_background_login"
+        app:cardElevation="10dp"
+        app:cardMaxElevation="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/layout_partida_geral"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <LinearLayout
+                    android:id="@+id/layoutGeral_relatorio_penCobrados"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:id="@+id/layout_relatorio_sessao_penaltis"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="8dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="5dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="25dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_weight="2.5"
+                            android:src="@drawable/ic_apito"
+                            android:tint="@color/Cor_Primaria" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:text="FALTAS"
+                            android:textColor="@color/Cor_Primaria"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/txt_relatorio_faltas"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="8dp"
+                            android:layout_weight="2"
+                            android:gravity="right"
+                            android:text="15"
+                            android:textColor="@color/Cor_Primaria"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@color/Cor_Primaria"
+                        android:orientation="vertical">
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_relatorio_graficoPenEncarados"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="vertical">
+
+                        <com.github.mikephil.charting.charts.HorizontalBarChart
+                            android:id="@+id/barChart_relatorio_faltas"
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:layout_marginTop="-25dp" />
+
+                        <LinearLayout
+                            android:id="@+id/layout_relatorio_faltasQtdMedias"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="5dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="5dp"
+                                    android:text="Quantidade"
+                                    android:textColor="@color/Cor_Primaria"
+                                    android:textSize="16sp" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginTop="5dp"
+                                    android:orientation="horizontal">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="9"
+                                        android:orientation="vertical">
+
+                                        <LinearLayout
+                                            android:id="@+id/layout_relatorio_fal1"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_margin="4dp"
+                                            android:layout_weight="1"
+                                            android:background="@color/Cor_Acentuada"
+                                            android:orientation="vertical"
+                                            android:visibility="visible" />
+
+                                        <LinearLayout
+                                            android:id="@+id/layout_relatorio_fal2"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_margin="4dp"
+                                            android:layout_weight="1"
+                                            android:background="@color/Cor_Atacante"
+                                            android:orientation="vertical"
+                                            android:visibility="visible">
+
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginLeft="5dp"
+                                        android:layout_weight="1"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:id="@+id/txt_relatorio_fal1"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:gravity="center_vertical"
+                                            android:text="Direita: 5"
+                                            android:visibility="visible" />
+
+                                        <TextView
+                                            android:id="@+id/txt_relatorio_fal2"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:gravity="center_vertical"
+                                            android:text="Esquerda: 2"
+                                            android:visibility="visible" />
+
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="5dp"
+                                    android:text="Médias"
+                                    android:textColor="@color/Cor_Primaria"
+                                    android:textSize="16sp" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginTop="5dp"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/txt_relatorio_faltasMinuto"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:text="1 falta a cada 35min" />
+
+                                    <TextView
+                                        android:id="@+id/txt_relatorio_faltasJogo"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:text="1 falta a cada 4 jogos" />
+
+                                    <TextView
+                                        android:id="@+id/txt_relatorio_faltasDia"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:text="1 falta a cada dia" />
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_relatorio_faltasComp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2.5"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:text="Comparativo com o mês anterior"
+                            android:textColor="@color/Cor_Primaria"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/txt_relatorio_faltasComp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:text="Sem registros de faltas no mês passado e neste."
+                            android:textColor="@color/Cor_Primaria"
+                            android:textSize="14sp"
+                            android:visibility="gone" />
+
+                        <LinearLayout
+                            android:id="@+id/layout_relatorio_graficoFaltasPass"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="5dp"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:id="@+id/layout_relatorio_tiposFaltasMes"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="30dp"
+                                android:layout_weight="3.5"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/txt_relatorio_falMesTotal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="-20dp"
+                                    android:layout_weight="1"
+                                    android:gravity="right"
+                                    android:text="Total" />
+
+                                <TextView
+                                    android:id="@+id/txt_relatorio_falMesCertas"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="-20dp"
+                                    android:layout_weight="1"
+                                    android:gravity="right"
+                                    android:text="Recebidas" />
+
+                                <TextView
+                                    android:id="@+id/txt_relatorio_falMesErradas"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="right"
+                                    android:text="Cometidas" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <com.github.mikephil.charting.charts.HorizontalBarChart
+                                    android:id="@+id/barChart_relatorio_falMes1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="80dp"
+                                    android:layout_weight="1">
+
+                                </com.github.mikephil.charting.charts.HorizontalBarChart>
+
+                                <com.github.mikephil.charting.charts.HorizontalBarChart
+                                    android:id="@+id/barChart_relatorio_falMes2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="80dp"
+                                    android:layout_marginTop="-50dp"
+                                    android:layout_weight="1">
+
+                                </com.github.mikephil.charting.charts.HorizontalBarChart>
+
+                                <com.github.mikephil.charting.charts.HorizontalBarChart
+                                    android:id="@+id/barChart_relatorio_falMes3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="80dp"
+                                    android:layout_marginTop="-50dp"
+                                    android:layout_weight="1">
+
+                                </com.github.mikephil.charting.charts.HorizontalBarChart>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_relatorio_scoutsDef"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:id="@+id/layout_relatorio_sessao_scoutsDef"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="8dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="5dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="25dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_weight="2.5"
+                            android:src="@drawable/ic_cartoes"
+                            android:tint="@color/Cor_Primaria" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:text="CARTÕES"
+                            android:textColor="@color/Cor_Primaria"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/txt_relatorio_cartoes"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="8dp"
+                            android:layout_weight="2"
+                            android:gravity="right"
+                            android:text="15"
+                            android:textColor="@color/Cor_Primaria"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@color/Cor_Primaria"
+                        android:orientation="vertical">
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/layout_relatorio_grafScoutDef"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dp"
+                                android:orientation="horizontal">
+
+                                <com.github.mikephil.charting.charts.PieChart
+                                    android:id="@+id/pieChart_relatorio_scoutsDef"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="190dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_weight="2"
+                                    android:minHeight="200dp" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_weight="2"
+                                    android:gravity="top"
+                                    android:orientation="vertical">
+
+
+                                    <LinearLayout
+                                        android:id="@+id/layout_relatorio_qtdScoutsDef"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:text="Quantidade"
+                                            android:textColor="@color/Cor_Primaria"
+                                            android:textSize="16sp" />
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="5dp"
+                                            android:orientation="horizontal">
+
+                                            <LinearLayout
+                                                android:id="@+id/layout_relatorio_tipoScoutsDef"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:layout_weight="8"
+                                                android:orientation="vertical">
+
+                                                <LinearLayout
+                                                    android:id="@+id/layout_relatorio_sdef1"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_margin="4dp"
+                                                    android:layout_weight="1"
+                                                    android:background="@color/Cor_Goleiro"
+                                                    android:orientation="vertical"
+                                                    android:visibility="visible" />
+
+                                                <LinearLayout
+                                                    android:id="@+id/layout_relatorio_sdef2"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_margin="4dp"
+                                                    android:layout_weight="1"
+                                                    android:background="@color/Cor_Defensor"
+                                                    android:orientation="vertical"
+                                                    android:visibility="visible">
+
+                                                </LinearLayout>
+
+                                                <LinearLayout
+                                                    android:id="@+id/layout_relatorio_sdef3"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_margin="4dp"
+                                                    android:layout_weight="1"
+                                                    android:background="@color/Cor_Atacante"
+                                                    android:orientation="vertical"
+                                                    android:visibility="visible" />
+
+                                            </LinearLayout>
+
+                                            <LinearLayout
+                                                android:id="@+id/layout_relatorio_tipoScoutsDefTxt"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:layout_marginLeft="5dp"
+                                                android:layout_weight="1"
+                                                android:orientation="vertical">
+
+                                                <TextView
+                                                    android:id="@+id/txt_relatorio_sdef1"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_weight="1"
+                                                    android:gravity="center_vertical"
+                                                    android:text="Direita: 5"
+                                                    android:visibility="visible" />
+
+                                                <TextView
+                                                    android:id="@+id/txt_relatorio_sdef2"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_weight="1"
+                                                    android:gravity="center_vertical"
+                                                    android:text="Esquerda: 2"
+                                                    android:visibility="visible" />
+
+                                                <TextView
+                                                    android:id="@+id/txt_relatorio_sdef3"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_weight="1"
+                                                    android:gravity="center_vertical"
+                                                    android:text="Cabeça: 1"
+                                                    android:visibility="visible" />
+
+                                            </LinearLayout>
+
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/layout_relatorio_medias1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_marginTop="10dp"
+                                            android:text="Médias"
+                                            android:textColor="@color/Cor_Primaria"
+                                            android:textSize="16sp" />
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="5dp"
+                                            android:layout_marginTop="5dp"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:id="@+id/txt_relatorio_desMinuto"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_weight="1"
+                                                android:text="1 cartão a cada 35min" />
+
+                                            <TextView
+                                                android:id="@+id/txt_relatorio_desJogo"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_weight="1"
+                                                android:text="1 cartão a cada 4 jogos" />
+
+                                            <TextView
+                                                android:id="@+id/txt_relatorio_desDia"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_weight="1"
+                                                android:text="1 cartão a cada dia" />
+
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:id="@+id/layout_relatorio_golsComp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.5"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:text="Comparativo com o mês anterior"
+                                android:textColor="@color/Cor_Primaria"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/txt_relatorio_scoutsDefComp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="12dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:text="Sem registros de cartões no mês passado e neste."
+                                android:textColor="@color/Cor_Primaria"
+                                android:textSize="14sp"
+                                android:visibility="gone" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="5dp">
+
+                                <LinearLayout
+                                    android:id="@+id/layout_relatorio_tipoSDefMes"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginTop="30dp"
+                                    android:layout_weight="4"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/txt_relatorio_finalMesTotal"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:gravity="right"
+                                        android:text="Total" />
+
+                                    <TextView
+                                        android:id="@+id/txt_relatorio_finalMesCertas"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="8dp"
+                                        android:layout_weight="1"
+                                        android:gravity="right"
+                                        android:text="Amarelos" />
+
+                                    <TextView
+                                        android:id="@+id/txt_relatorio_finalMesErradas"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        android:layout_weight="1"
+                                        android:gravity="right"
+                                        android:text="Vermelhos" />
+
+                                    <TextView
+                                        android:id="@+id/txt_relatorio_finalMesBloq"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="8dp"
+                                        android:layout_weight="1"
+                                        android:gravity="right"
+                                        android:text="Azuis" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <com.github.mikephil.charting.charts.HorizontalBarChart
+                                        android:id="@+id/barChart_relatorio_sDefMes1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="80dp"
+                                        android:layout_weight="1">
+
+                                    </com.github.mikephil.charting.charts.HorizontalBarChart>
+
+                                    <com.github.mikephil.charting.charts.HorizontalBarChart
+                                        android:id="@+id/barChart_relatorio_sDefMes2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="80dp"
+                                        android:layout_marginTop="-50dp"
+                                        android:layout_weight="1">
+
+                                    </com.github.mikephil.charting.charts.HorizontalBarChart>
+
+                                    <com.github.mikephil.charting.charts.HorizontalBarChart
+                                        android:id="@+id/barChart_relatorio_sDefMes3"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="80dp"
+                                        android:layout_marginTop="-50dp"
+                                        android:layout_weight="1">
+
+                                    </com.github.mikephil.charting.charts.HorizontalBarChart>
+
+                                    <com.github.mikephil.charting.charts.HorizontalBarChart
+                                        android:id="@+id/barChart_relatorio_sDefMes4"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="80dp"
+                                        android:layout_marginTop="-50dp"
+                                        android:layout_weight="1">
+
+                                    </com.github.mikephil.charting.charts.HorizontalBarChart>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_relatorio_goleiro"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:id="@+id/layout_relatorio_sessao_goleiro"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="8dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="5dp">
+
+                        <ImageView
+                            android:id="@+id/imageView5"
+                            android:layout_width="match_parent"
+                            android:layout_height="25dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_weight="2.5"
+                            android:src="@drawable/ic_goleiro"
+                            android:tint="@color/Cor_Primaria" />
+
+                        <TextView
+                            android:id="@+id/textView3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:text="FIN. CERTAS ENCARADAS"
+                            android:textColor="@color/Cor_Primaria"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/txt_relatorio_finCertasEncaradas"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="8dp"
+                            android:layout_weight="2"
+                            android:gravity="right"
+                            android:text="15"
+                            android:textColor="@color/Cor_Primaria"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@color/Cor_Primaria"
+                        android:orientation="vertical">
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/layout_relatorio_qtdGrafDefGolS"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <com.github.mikephil.charting.charts.HorizontalBarChart
+                                android:id="@+id/barChart_relatorio_defGolSof"
+                                android:layout_width="match_parent"
+                                android:layout_height="100dp"
+                                android:layout_marginTop="-20dp"
+                                android:layout_marginBottom="10dp" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="2"
+                                android:gravity="top"
+                                android:orientation="vertical">
+
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Quantidade"
+                                    android:textColor="@color/Cor_Primaria"
+                                    android:textSize="16sp" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:orientation="horizontal">
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginRight="15dp">
+
+                                        <LinearLayout
+                                            android:id="@+id/layout_relatorio_gol1"
+                                            android:layout_width="12dp"
+                                            android:layout_height="12dp"
+                                            android:layout_margin="4dp"
+                                            android:layout_weight="1"
+                                            android:background="@color/Cor_Acentuada"
+                                            android:orientation="vertical"
+                                            android:visibility="visible" />
+
+                                        <TextView
+                                            android:id="@+id/txt_relatorio_gol1"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="5dp"
+                                            android:layout_weight="1"
+                                            android:gravity="center|center_vertical"
+                                            android:text="Direita: 5"
+                                            android:visibility="visible" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content">
+
+                                        <LinearLayout
+                                            android:id="@+id/layout_relatorio_gol2"
+                                            android:layout_width="12dp"
+                                            android:layout_height="12dp"
+                                            android:layout_margin="4dp"
+                                            android:layout_weight="1"
+                                            android:background="@color/Cor_Atacante"
+                                            android:orientation="vertical"
+                                            android:visibility="visible">
+
+                                        </LinearLayout>
+
+                                        <TextView
+                                            android:id="@+id/txt_relatorio_gol2"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="5dp"
+                                            android:layout_weight="1"
+                                            android:gravity="center|center_vertical"
+                                            android:text="Esquerda: 2"
+                                            android:visibility="visible" />
+
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical"
+                                    android:visibility="gone">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginTop="5dp"
+                                        android:text="Proporção"
+                                        android:textColor="@color/Cor_Primaria"
+                                        android:textSize="16sp" />
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="5dp"
+                                        android:layout_marginTop="5dp"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:id="@+id/txt_relatorio_proporcaoDefGol"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:text="3 defesas por gol" />
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/layout_relatorio_mediasGoleiro"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_weight="1"
+                                    android:text="Médias"
+                                    android:textColor="@color/Cor_Primaria"
+                                    android:textSize="16sp" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:orientation="horizontal">
+
+                                    <LinearLayout
+                                        android:id="@+id/layout_relatorio_mediasDefesas"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:text="Defesas"
+                                            android:textColor="@color/Cor_Primaria"
+                                            android:textSize="16sp" />
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="5dp"
+                                            android:layout_marginTop="5dp"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:id="@+id/txt_relatorio_defMinuto"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_weight="1"
+                                                android:text="1 defesa a cada 35min" />
+
+                                            <TextView
+                                                android:id="@+id/txt_relatorio_defJogo"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_weight="1"
+                                                android:text="1 defesa a cada 4 jogos" />
+
+                                            <TextView
+                                                android:id="@+id/txt_relatorio_defDia"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_weight="1"
+                                                android:text="1 defesa a cada dia" />
+
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/layout_relatorio_mediasGolSof"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:text="Gols Sofridos"
+                                            android:textColor="@color/Cor_Primaria"
+                                            android:textSize="16sp" />
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="5dp"
+                                            android:layout_marginTop="5dp"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:id="@+id/txt_relatorio_gSofMinuto"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_weight="1"
+                                                android:text="1 gol a cada 35min" />
+
+                                            <TextView
+                                                android:id="@+id/txt_relatorio_gSofJogo"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_weight="1"
+                                                android:text="1 gol a cada 4 jogos" />
+
+                                            <TextView
+                                                android:id="@+id/txt_relatorio_gSofDia"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_weight="1"
+                                                android:text="1 gol a cada dia" />
+
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layout_relatorio_defGolComp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.5"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="5dp"
+                                android:text="Comparativo com o mês anterior"
+                                android:textColor="@color/Cor_Primaria"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/txt_relatorio_defGolComp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="12dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:text="Sem registros de defesas/gols sofridos no mês passado e neste."
+                                android:textColor="@color/Cor_Primaria"
+                                android:textSize="14sp"
+                                android:visibility="gone" />
+
+                            <LinearLayout
+                                android:id="@+id/layout_relatorio_graficoDefGolComp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="5dp">
+
+                                <LinearLayout
+                                    android:id="@+id/layout_relatorio_defGolMes"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginTop="30dp"
+                                    android:layout_weight="4"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/txt_relatorio_finCertasMes"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:gravity="right"
+                                        android:text="Fin. Certas" />
+
+                                    <TextView
+                                        android:id="@+id/txt_relatorio_defesasMes"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="8dp"
+                                        android:layout_weight="1"
+                                        android:gravity="right"
+                                        android:text="Defesas" />
+
+                                    <TextView
+                                        android:id="@+id/txt_relatorio_golSofMes"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="8dp"
+                                        android:layout_weight="1"
+                                        android:gravity="right"
+                                        android:text="Gols Sof" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <com.github.mikephil.charting.charts.HorizontalBarChart
+                                        android:id="@+id/barChart_relatorio_finCertas"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="80dp"
+                                        android:layout_weight="1">
+
+                                    </com.github.mikephil.charting.charts.HorizontalBarChart>
+
+                                    <com.github.mikephil.charting.charts.HorizontalBarChart
+                                        android:id="@+id/barChart_relatorio_defesas"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="80dp"
+                                        android:layout_marginTop="-50dp"
+                                        android:layout_weight="1">
+
+                                    </com.github.mikephil.charting.charts.HorizontalBarChart>
+
+                                    <com.github.mikephil.charting.charts.HorizontalBarChart
+                                        android:id="@+id/barChart_relatorio_golSof"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="80dp"
+                                        android:layout_marginTop="-50dp"
+                                        android:layout_weight="1">
+
+                                    </com.github.mikephil.charting.charts.HorizontalBarChart>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

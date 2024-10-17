@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Cor_Primaria_Transp"
+    android:orientation="vertical"
+    tools:context=".fragments.PartidaListFragment">
+
+    <ProgressBar
+        android:id="@+id/progress_lista"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:indeterminate="true"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/fLayout_lista"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="5"
+        android:visibility="visible">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_lista"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ViewStub
+            android:id="@+id/empty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout="@layout/list_view_empty"
+            android:visibility="invisible" />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_adicionar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            app:fab_colorNormal="@color/Cor_Acentuada"
+            app:fab_colorPressed="@color/Cor_Primaria"
+            app:fab_icon="@drawable/ic_adicionar"
+            app:fab_size="normal"
+            app:maxImageSize="30dp"></com.getbase.floatingactionbutton.FloatingActionButton>
+
+
+    </FrameLayout>
+
+</LinearLayout>
+

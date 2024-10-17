@@ -1,0 +1,1416 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.PartidaInfosFragment">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="1.5dp"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/layout_background_login"
+        app:cardElevation="10dp"
+        app:cardMaxElevation="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/layout_partida_geral"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/txt_partidaStats_visu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginBottom="3dp"
+                    android:text="OBS.: Componentes bloqueados para a visualização."
+                    android:textColor="@color/Cor_Primaria"
+                    android:textSize="14sp"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/layout_relatorio_sessao_gols"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="5dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="6"
+                        android:text="ATAQUE"
+                        android:textColor="@color/Cor_Primaria"
+                        android:textSize="18sp" />
+
+                    <ImageButton
+                        android:id="@+id/img_partida_ataque_add"
+                        android:layout_width="43dp"
+                        android:layout_height="43dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="#005A0404"
+                        android:src="@drawable/ic_adicionar_circulo"
+                        android:tint="@color/Cor_Primaria" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/Cor_Primaria"
+                    android:orientation="vertical"></LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_partida_ataque"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="-10dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_weight="1"
+                                    android:text="Gols"
+                                    android:textColor="@color/Cor_Primaria"
+                                    android:textSize="16sp" />
+
+                                <ImageView
+                                    android:id="@+id/imageView3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="43dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="4.5"
+                                    android:src="@drawable/ic_gol"
+                                    android:tint="@color/Cor_Primaria" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="-20dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:id="@+id/edt_partida_gols"
+                                    style="@style/Orz_TextInputLayout"
+                                    app:endIconDrawable="@drawable/ic_adicionar"
+                                    app:endIconMode="custom"
+                                    app:startIconDrawable="@drawable/ic_menos">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        style="@style/Orz_TextInputEditText"
+                                        android:layout_width="match_parent"
+                                        android:enabled="false"
+                                        android:gravity="center"
+                                        android:inputType="numberDecimal"
+                                        android:text="0"
+                                        android:textColor="@color/black">
+
+                                    </com.google.android.material.textfield.TextInputEditText>
+                                </com.google.android.material.textfield.TextInputLayout>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/edt_partida_golspe"
+                                style="@style/Orz_TextInputLayout"
+                                android:hint="@string/txt_partida_golspe"
+                                app:endIconDrawable="@drawable/ic_adicionar"
+                                app:endIconMode="custom"
+                                app:startIconDrawable="@drawable/ic_menos">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    style="@style/Orz_TextInputEditText"
+                                    android:layout_width="match_parent"
+                                    android:enabled="false"
+                                    android:gravity="center"
+                                    android:inputType="numberDecimal"
+                                    android:text="0"
+                                    android:textColor="@color/black">
+
+                                </com.google.android.material.textfield.TextInputEditText>
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/edt_partida_golspd"
+                                style="@style/Orz_TextInputLayout"
+                                android:hint="@string/txt_partida_golspd"
+                                app:endIconDrawable="@drawable/ic_adicionar"
+                                app:endIconMode="custom"
+                                app:startIconDrawable="@drawable/ic_menos">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    style="@style/Orz_TextInputEditText"
+                                    android:layout_width="match_parent"
+                                    android:enabled="false"
+                                    android:gravity="center"
+                                    android:inputType="numberDecimal"
+                                    android:text="0"
+                                    android:textColor="@color/black">
+
+                                </com.google.android.material.textfield.TextInputEditText>
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/edt_partida_golsou"
+                                style="@style/Orz_TextInputLayout"
+                                android:hint="@string/txt_partida_golsou"
+                                app:endIconDrawable="@drawable/ic_adicionar"
+                                app:endIconMode="custom"
+                                app:startIconDrawable="@drawable/ic_menos">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    style="@style/Orz_TextInputEditText"
+                                    android:layout_width="match_parent"
+                                    android:enabled="false"
+                                    android:gravity="center"
+                                    android:inputType="numberDecimal"
+                                    android:text="0"
+                                    android:textColor="@color/black">
+
+                                </com.google.android.material.textfield.TextInputEditText>
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/edt_partida_golsca"
+                                style="@style/Orz_TextInputLayout"
+                                android:hint="@string/txt_partida_golsca"
+                                app:endIconDrawable="@drawable/ic_adicionar"
+                                app:endIconMode="custom"
+                                app:startIconDrawable="@drawable/ic_menos">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    style="@style/Orz_TextInputEditText"
+                                    android:layout_width="match_parent"
+                                    android:enabled="false"
+                                    android:gravity="center"
+                                    android:inputType="numberDecimal"
+                                    android:text="0"
+                                    android:textColor="@color/black">
+
+                                </com.google.android.material.textfield.TextInputEditText>
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="-15dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_weight="1"
+                                    android:text="Finalizações"
+                                    android:textColor="@color/Cor_Primaria"
+                                    android:textSize="16sp" />
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="43dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="4.5"
+                                    android:src="@drawable/ic_chuteira"
+                                    android:tint="@color/Cor_Primaria" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="-20dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:id="@+id/edt_partida_finalizacoes"
+                                    style="@style/Orz_TextInputLayout"
+                                    app:endIconDrawable="@drawable/ic_adicionar"
+                                    app:endIconMode="custom"
+                                    app:startIconDrawable="@drawable/ic_menos">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        style="@style/Orz_TextInputEditText"
+                                        android:layout_width="match_parent"
+                                        android:enabled="false"
+                                        android:gravity="center"
+                                        android:inputType="numberDecimal"
+                                        android:text="0"
+                                        android:textColor="@color/black">
+
+                                    </com.google.android.material.textfield.TextInputEditText>
+                                </com.google.android.material.textfield.TextInputLayout>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/edt_partida_finalCertas"
+                                style="@style/Orz_TextInputLayout"
+                                android:hint="@string/txt_partida_finalCertas"
+                                app:endIconDrawable="@drawable/ic_adicionar"
+                                app:endIconMode="custom"
+                                app:startIconDrawable="@drawable/ic_menos">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    style="@style/Orz_TextInputEditText"
+                                    android:layout_width="match_parent"
+                                    android:enabled="false"
+                                    android:gravity="center"
+                                    android:inputType="numberDecimal"
+                                    android:text="0"
+                                    android:textColor="@color/black">
+
+                                </com.google.android.material.textfield.TextInputEditText>
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/edt_partida_finalErradas"
+                                style="@style/Orz_TextInputLayout"
+                                android:hint="@string/txt_partida_finalErradas"
+                                app:endIconDrawable="@drawable/ic_adicionar"
+                                app:endIconMode="custom"
+                                app:startIconDrawable="@drawable/ic_menos">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    style="@style/Orz_TextInputEditText"
+                                    android:layout_width="match_parent"
+                                    android:enabled="false"
+                                    android:gravity="center"
+                                    android:inputType="numberDecimal"
+                                    android:text="0"
+                                    android:textColor="@color/black">
+
+                                </com.google.android.material.textfield.TextInputEditText>
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/edt_partida_finalBloq"
+                                style="@style/Orz_TextInputLayout"
+                                android:hint="@string/txt_partida_finalBloq"
+                                app:endIconDrawable="@drawable/ic_adicionar"
+                                app:endIconMode="custom"
+                                app:startIconDrawable="@drawable/ic_menos">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    style="@style/Orz_TextInputEditText"
+                                    android:layout_width="match_parent"
+                                    android:enabled="false"
+                                    android:gravity="center"
+                                    android:inputType="numberDecimal"
+                                    android:text="0"
+                                    android:textColor="@color/black">
+
+                                </com.google.android.material.textfield.TextInputEditText>
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/edt_partida_finalTrave"
+                                style="@style/Orz_TextInputLayout"
+                                android:hint="@string/txt_partida_finalTrave"
+                                app:endIconDrawable="@drawable/ic_adicionar"
+                                app:endIconMode="custom"
+                                app:startIconDrawable="@drawable/ic_menos">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    style="@style/Orz_TextInputEditText"
+                                    android:layout_width="match_parent"
+                                    android:enabled="false"
+                                    android:gravity="center"
+                                    android:inputType="numberDecimal"
+                                    android:text="0"
+                                    android:textColor="@color/black">
+
+                                </com.google.android.material.textfield.TextInputEditText>
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_weight="1"
+                                    android:text="Pênaltis Cobrados"
+                                    android:textColor="@color/Cor_Primaria"
+                                    android:textSize="16sp" />
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="43dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="4.5"
+                                    android:src="@drawable/ic_penalti"
+                                    android:tint="@color/Cor_Primaria" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/edt_partida_penaltisCertos"
+                                style="@style/Orz_TextInputLayout"
+                                android:hint="@string/txt_partida_penaltisCertos"
+                                app:endIconDrawable="@drawable/ic_adicionar"
+                                app:endIconMode="custom"
+                                app:startIconDrawable="@drawable/ic_menos">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    style="@style/Orz_TextInputEditText"
+                                    android:layout_width="match_parent"
+                                    android:enabled="false"
+                                    android:gravity="center"
+                                    android:inputType="numberDecimal"
+                                    android:text="0"
+                                    android:textColor="@color/black">
+
+                                </com.google.android.material.textfield.TextInputEditText>
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/edt_partida_penaltisErrados"
+                                style="@style/Orz_TextInputLayout"
+                                android:hint="@string/txt_partida_penaltisErrados"
+                                app:endIconDrawable="@drawable/ic_adicionar"
+                                app:endIconMode="custom"
+                                app:startIconDrawable="@drawable/ic_menos">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    style="@style/Orz_TextInputEditText"
+                                    android:layout_width="match_parent"
+                                    android:enabled="false"
+                                    android:gravity="center"
+                                    android:inputType="numberDecimal"
+                                    android:text="0"
+                                    android:textColor="@color/black">
+
+                                </com.google.android.material.textfield.TextInputEditText>
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="-15dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_weight="1"
+                                    android:text="Assistências"
+                                    android:textColor="@color/Cor_Primaria"
+                                    android:textSize="16sp" />
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="43dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="4.5"
+                                    android:src="@drawable/ic_assistencia"
+                                    android:tint="@color/Cor_Primaria" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="-20dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:id="@+id/edt_partida_assistencias"
+                                    style="@style/Orz_TextInputLayout"
+                                    app:endIconDrawable="@drawable/ic_adicionar"
+                                    app:endIconMode="custom"
+                                    app:startIconDrawable="@drawable/ic_menos">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        style="@style/Orz_TextInputEditText"
+                                        android:layout_width="match_parent"
+                                        android:enabled="false"
+                                        android:gravity="center"
+                                        android:inputType="numberDecimal"
+                                        android:text="0"
+                                        android:textColor="@color/black">
+
+                                    </com.google.android.material.textfield.TextInputEditText>
+                                </com.google.android.material.textfield.TextInputLayout>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:id="@+id/layout_partida_sessao_defesa"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="5dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="6"
+                        android:text="DEFESA"
+                        android:textColor="@color/Cor_Primaria"
+                        android:textSize="18sp" />
+
+                    <ImageButton
+                        android:id="@+id/img_partida_defesa_add"
+                        android:layout_width="43dp"
+                        android:layout_height="43dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="#005A0404"
+                        android:src="@drawable/ic_adicionar_circulo"
+                        android:tint="@color/Cor_Primaria" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/Cor_Primaria"
+                    android:orientation="vertical">
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_partida_defesa"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_weight="1"
+                                    android:text="Scouts defensivos"
+                                    android:textColor="@color/Cor_Primaria"
+                                    android:textSize="16sp" />
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="43dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="4.5"
+                                    android:src="@drawable/ic_escudo"
+                                    android:tint="@color/Cor_Primaria" />
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/edt_partida_desarmes"
+                                style="@style/Orz_TextInputLayout"
+                                android:hint="@string/txt_partida_desarmes"
+                                app:endIconDrawable="@drawable/ic_adicionar"
+                                app:endIconMode="custom"
+                                app:startIconDrawable="@drawable/ic_menos">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    style="@style/Orz_TextInputEditText"
+                                    android:layout_width="match_parent"
+                                    android:enabled="false"
+                                    android:gravity="center"
+                                    android:inputType="numberDecimal"
+                                    android:text="0"
+                                    android:textColor="@color/black">
+
+                                </com.google.android.material.textfield.TextInputEditText>
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/edt_partida_cortes"
+                                style="@style/Orz_TextInputLayout"
+                                android:hint="@string/txt_partida_cortes"
+                                app:endIconDrawable="@drawable/ic_adicionar"
+                                app:endIconMode="custom"
+                                app:startIconDrawable="@drawable/ic_menos">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    style="@style/Orz_TextInputEditText"
+                                    android:layout_width="match_parent"
+                                    android:enabled="false"
+                                    android:gravity="center"
+                                    android:inputType="numberDecimal"
+                                    android:text="0"
+                                    android:textColor="@color/black">
+
+                                </com.google.android.material.textfield.TextInputEditText>
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/edt_partida_bloqueios"
+                                style="@style/Orz_TextInputLayout"
+                                android:hint="@string/txt_partida_bloqueios"
+                                app:endIconDrawable="@drawable/ic_adicionar"
+                                app:endIconMode="custom"
+                                app:startIconDrawable="@drawable/ic_menos">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    style="@style/Orz_TextInputEditText"
+                                    android:layout_width="match_parent"
+                                    android:enabled="false"
+                                    android:gravity="center"
+                                    android:inputType="numberDecimal"
+                                    android:text="0"
+                                    android:textColor="@color/black">
+
+                                </com.google.android.material.textfield.TextInputEditText>
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/edt_partida_erros"
+                                style="@style/Orz_TextInputLayout"
+                                android:hint="@string/txt_partida_erros"
+                                app:endIconDrawable="@drawable/ic_adicionar"
+                                app:endIconMode="custom"
+                                app:startIconDrawable="@drawable/ic_menos">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    style="@style/Orz_TextInputEditText"
+                                    android:layout_width="match_parent"
+                                    android:enabled="false"
+                                    android:gravity="center"
+                                    android:inputType="numberDecimal"
+                                    android:text="0"
+                                    android:textColor="@color/black">
+
+                                </com.google.android.material.textfield.TextInputEditText>
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_weight="1"
+                                    android:text="Goleiro"
+                                    android:textColor="@color/Cor_Primaria"
+                                    android:textSize="16sp" />
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="43dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="4.5"
+                                    android:src="@drawable/ic_goleiro"
+                                    android:tint="@color/Cor_Primaria" />
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/edt_partida_defesas"
+                                style="@style/Orz_TextInputLayout"
+                                android:hint="@string/txt_partida_defesas"
+                                app:endIconDrawable="@drawable/ic_adicionar"
+                                app:endIconMode="custom"
+                                app:startIconDrawable="@drawable/ic_menos">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    style="@style/Orz_TextInputEditText"
+                                    android:layout_width="match_parent"
+                                    android:enabled="false"
+                                    android:gravity="center"
+                                    android:inputType="numberDecimal"
+                                    android:text="0"
+                                    android:textColor="@color/black">
+
+                                </com.google.android.material.textfield.TextInputEditText>
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/edt_partida_golsSofridos"
+                                style="@style/Orz_TextInputLayout"
+                                android:hint="@string/txt_partida_golsSofridos"
+                                app:endIconDrawable="@drawable/ic_adicionar"
+                                app:endIconMode="custom"
+                                app:startIconDrawable="@drawable/ic_menos">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    style="@style/Orz_TextInputEditText"
+                                    android:layout_width="match_parent"
+                                    android:enabled="false"
+                                    android:gravity="center"
+                                    android:inputType="numberDecimal"
+                                    android:text="0"
+                                    android:textColor="@color/black">
+
+                                </com.google.android.material.textfield.TextInputEditText>
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_weight="1"
+                                    android:text="Pênaltis"
+                                    android:textColor="@color/Cor_Primaria"
+                                    android:textSize="16sp" />
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="43dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="4.5"
+                                    android:src="@drawable/ic_penalti"
+                                    android:tint="@color/Cor_Primaria" />
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/edt_partida_penaltisDef"
+                                style="@style/Orz_TextInputLayout"
+                                android:hint="@string/txt_partida_penaltisDef"
+                                app:endIconDrawable="@drawable/ic_adicionar"
+                                app:endIconMode="custom"
+                                app:startIconDrawable="@drawable/ic_menos">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    style="@style/Orz_TextInputEditText"
+                                    android:layout_width="match_parent"
+                                    android:enabled="false"
+                                    android:gravity="center"
+                                    android:inputType="numberDecimal"
+                                    android:text="0"
+                                    android:textColor="@color/black">
+
+                                </com.google.android.material.textfield.TextInputEditText>
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/edt_partida_penaltisLev"
+                                style="@style/Orz_TextInputLayout"
+                                android:hint="@string/txt_partida_penaltisLev"
+                                app:endIconDrawable="@drawable/ic_adicionar"
+                                app:endIconMode="custom"
+                                app:startIconDrawable="@drawable/ic_menos">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    style="@style/Orz_TextInputEditText"
+                                    android:layout_width="match_parent"
+                                    android:enabled="false"
+                                    android:gravity="center"
+                                    android:inputType="numberDecimal"
+                                    android:text="0"
+                                    android:textColor="@color/black">
+
+                                </com.google.android.material.textfield.TextInputEditText>
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_partida_sessao_disciplina"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="5dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="6"
+                        android:text="DISCIPLINA"
+                        android:textColor="@color/Cor_Primaria"
+                        android:textSize="18sp" />
+
+                    <ImageButton
+                        android:id="@+id/img_partida_disciplina_add"
+                        android:layout_width="43dp"
+                        android:layout_height="43dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="#005A0404"
+                        android:src="@drawable/ic_adicionar_circulo"
+                        android:tint="@color/Cor_Primaria" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/Cor_Primaria"
+                    android:orientation="vertical"></LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_partida_disciplina"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_weight="1"
+                                    android:text="Faltas"
+                                    android:textColor="@color/Cor_Primaria"
+                                    android:textSize="16sp" />
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="43dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="4.5"
+                                    android:src="@drawable/ic_apito"
+                                    android:tint="@color/Cor_Primaria" />
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/edt_partida_faltasCom"
+                                style="@style/Orz_TextInputLayout"
+                                android:hint="@string/txt_partida_faltasComet"
+                                app:endIconDrawable="@drawable/ic_adicionar"
+                                app:endIconMode="custom"
+                                app:startIconDrawable="@drawable/ic_menos">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    style="@style/Orz_TextInputEditText"
+                                    android:layout_width="match_parent"
+                                    android:enabled="false"
+                                    android:gravity="center"
+                                    android:inputType="numberDecimal"
+                                    android:text="0"
+                                    android:textColor="@color/black">
+
+                                </com.google.android.material.textfield.TextInputEditText>
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/edt_partida_faltasRec"
+                                style="@style/Orz_TextInputLayout"
+                                android:hint="@string/txt_partida_faltasReceb"
+                                app:endIconDrawable="@drawable/ic_adicionar"
+                                app:endIconMode="custom"
+                                app:startIconDrawable="@drawable/ic_menos">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    style="@style/Orz_TextInputEditText"
+                                    android:layout_width="match_parent"
+                                    android:enabled="false"
+                                    android:gravity="center"
+                                    android:inputType="numberDecimal"
+                                    android:text="0"
+                                    android:textColor="@color/black">
+
+                                </com.google.android.material.textfield.TextInputEditText>
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_weight="1"
+                                    android:text="Cartões"
+                                    android:textColor="@color/Cor_Primaria"
+                                    android:textSize="16sp" />
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="43dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="4.5"
+                                    android:src="@drawable/ic_cartoes"
+                                    android:tint="@color/Cor_Primaria" />
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/edt_partida_cartoesAma"
+                                style="@style/Orz_TextInputLayout"
+                                android:hint="@string/txt_partida_cartoesAma"
+                                app:endIconDrawable="@drawable/ic_adicionar"
+                                app:endIconMode="custom"
+                                app:startIconDrawable="@drawable/ic_menos">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    style="@style/Orz_TextInputEditText"
+                                    android:layout_width="match_parent"
+                                    android:enabled="false"
+                                    android:gravity="center"
+                                    android:inputType="numberDecimal"
+                                    android:text="0"
+                                    android:textColor="@color/black">
+
+                                </com.google.android.material.textfield.TextInputEditText>
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/edt_partida_cartoesVerm"
+                                style="@style/Orz_TextInputLayout"
+                                android:hint="@string/txt_partida_cartoesVerm"
+                                app:endIconDrawable="@drawable/ic_adicionar"
+                                app:endIconMode="custom"
+                                app:startIconDrawable="@drawable/ic_menos">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    style="@style/Orz_TextInputEditText"
+                                    android:layout_width="match_parent"
+                                    android:enabled="false"
+                                    android:gravity="center"
+                                    android:inputType="numberDecimal"
+                                    android:text="0"
+                                    android:textColor="@color/black">
+
+                                </com.google.android.material.textfield.TextInputEditText>
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/edt_partida_cartoesAzul"
+                                style="@style/Orz_TextInputLayout"
+                                android:hint="@string/txt_partida_cartoesAzul"
+                                app:endIconDrawable="@drawable/ic_adicionar"
+                                app:endIconMode="custom"
+                                app:startIconDrawable="@drawable/ic_menos">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    style="@style/Orz_TextInputEditText"
+                                    android:layout_width="match_parent"
+                                    android:enabled="false"
+                                    android:gravity="center"
+                                    android:inputType="numberDecimal"
+                                    android:text="0"
+                                    android:textColor="@color/black">
+
+                                </com.google.android.material.textfield.TextInputEditText>
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </ScrollView>
+
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

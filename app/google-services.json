@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "274927020479",
+    "project_id": "meu-scout",
+    "storage_bucket": "meu-scout.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:274927020479:android:bfeff175952a008fcd190a",
+        "android_client_info": {
+          "package_name": "tcc.meuscout"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "274927020479-stepsm7962o8nh523c004h95hdkq6jbl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "tcc.meuscout",
+            "certificate_hash": "16554421f3e38ded4ae27c3f0b47230a5eb5886f"
+          }
+        },
+        {
+          "client_id": "274927020479-6f66bl61agp0kadkn3m5cind5mgv6lfq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCRHWDzChvsJDVov1CCcDWiwx97Zip7ICg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "274927020479-6f66bl61agp0kadkn3m5cind5mgv6lfq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

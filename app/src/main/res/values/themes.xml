@@ -1,0 +1,168 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="MeuScout" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/Cor_Primaria</item>
+        <item name="colorPrimaryVariant">@color/Cor_Acentuada</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="android:popupTheme" tools:targetApi="lollipop">@style/popupMenu</item>
+        <item name="titleTextColor">@android:color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/Cor_Acentuada</item>
+        <item name="colorSecondaryVariant">@color/Cor_Primaria</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <!-- Status bar color.
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>-->
+        <!-- <item name="android:actionBarTheme">@style/MyActionBar</item> -->
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="Theme.MeuScout2" parent="@style/Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/Cor_Primaria</item>
+        <item name="colorPrimaryVariant">@color/Cor_Acentuada</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="android:popupTheme" tools:targetApi="lollipop">@style/popupMenu</item>
+        <item name="titleTextColor">@android:color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/Cor_Acentuada</item>
+        <item name="colorSecondaryVariant">@color/Cor_Primaria</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="MyActionBar" parent="@android:style/Widget.Holo.Light.ActionBar">
+        <item name="android:background">@color/Cor_Primaria</item>
+    </style>
+
+    <style name="Theme.AppCompat" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="colorPrimary">@color/Cor_Primaria</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/Cor_Acentuada</item>
+        <item name="colorPrimaryDark">@color/black</item>
+        <item name="titleTextColor">@android:color/white</item>
+        <item name="android:popupTheme" tools:targetApi="lollipop">@style/popupMenu</item>
+        <item name="actionOverflowButtonStyle">@style/OverFlow</item>
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+        <item name="android:actionOverflowButtonStyle">@style/DotsMenuPopupDrawer</item>
+    </style>
+
+    <style name="Orz_TextInputEditText" parent="Widget.AppCompat.EditText">
+        <item name="android:textSize">16dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingRight">0dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:paddingTop">15dp</item>
+        <item name="android:inputType">textLongMessage</item>
+
+    </style>
+
+    <style name="DrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="color">@color/white</item>
+    </style>
+
+    <style name="OverFlow" parent="@style/Widget.AppCompat.Light.ActionButton.Overflow"></style>
+
+    <style name="popupMenu" parent="ThemeOverlay.AppCompat.Light"></style>
+
+    <style name="Orz_TextInputLayout" parent="Theme.MaterialComponents">
+        <item name="android:theme">@style/Theme.AppCompat.Light.NoActionBar</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:padding">5dp</item>
+        <item name="boxBackgroundMode">none</item>
+        <item name="hintTextColor">@color/Cor_Primaria</item>
+        <item name="android:textColorHint">@android:color/black</item>
+        <item name="android:inputType">textMultiLine</item>
+        <item name="errorTextColor">@android:color/holo_red_dark</item>
+        <item name="errorTextAppearance">@style/Orz_textSize</item>
+        <item name="colorControlNormal">@color/black</item>
+        <item name="colorControlActivated">@color/Cor_Primaria</item>
+        <item name="errorEnabled">true</item>
+    </style>
+
+
+    <style name="Orz_textSize" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">8dp</item>
+    </style>
+
+    <style name="Orz_DataInputLayout" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <item name="android:theme">@style/Theme.MaterialComponents.Light.NoActionBar</item>
+        <item name="android:layout_width">170dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="boxBackgroundMode">none</item>
+        <item name="endIconMode">custom</item>
+        <item name="android:padding">5dp</item>
+        <item name="endIconDrawable">@drawable/ic_calendar</item>
+        <item name="hintTextColor">@color/Cor_Primaria</item>
+        <item name="android:textColorHint">@android:color/black</item>
+        <item name="android:inputType">date</item>
+        <item name="errorTextColor">@android:color/holo_red_dark</item>
+        <item name="errorTextAppearance">@style/Orz_textSize</item>
+        <item name="errorEnabled">true</item>
+    </style>
+
+    <style name="Orz_HoraInputLayout" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <item name="android:theme">@style/Theme.AppCompat.Light.NoActionBar</item>
+        <item name="android:layout_width">150dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="boxBackgroundMode">none</item>
+        <item name="android:padding">5dp</item>
+        <item name="endIconMode">custom</item>
+        <item name="endIconDrawable">@drawable/ic_time</item>
+        <item name="hintTextColor">@color/Cor_Primaria</item>
+        <item name="android:textColorHint">@android:color/black</item>
+        <item name="android:inputType">time</item>
+        <item name="errorTextColor">@android:color/holo_red_dark</item>
+        <item name="errorTextAppearance">@style/Orz_textSize</item>
+        <item name="errorEnabled">true</item>
+    </style>
+
+    <style name="Orz_NotaInputLayout" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <item name="android:theme">@style/Theme.AppCompat.Light.NoActionBar</item>
+        <item name="endIconMode">custom</item>
+        <item name="endIconDrawable">@drawable/ic_nota</item>
+    </style>
+
+    <style name="Orz_SelectionItemSpinner" parent="Widget.AppCompat.Spinner.Underlined" />
+
+    <style name="AppThemeDrawerMenu.NoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/Cor_Primaria</item>
+        <item name="colorPrimaryDark">@color/black</item>
+        <item name="android:popupTheme" tools:targetApi="lollipop">@style/popupMenu</item>
+        <item name="actionOverflowButtonStyle">@style/OverFlow</item>
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+        <item name="android:actionOverflowButtonStyle">@style/DotsMenuPopupDrawer</item>
+    </style>
+
+    <style name="DotsMenuPopupDrawer">
+        <item name="android:src">@drawable/ic_popupmenu_drawer</item>
+    </style>
+
+    <style name="Theme.MeuScout.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.MeuScout.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.MeuScout.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="MonthPickerDialogStyle" >
+        <item name="monthBgColor">@color/Cor_Primaria_Transp</item>
+        <item name="monthBgSelectedColor">@color/white</item>
+        <item name="monthFontColorNormal">@color/Cor_Primaria</item>
+        <item name="monthFontColorDisabled">@color/Cor_Goleiro</item>
+        <item name="monthFontColorSelected">@color/Cor_Primaria</item>
+
+        <item name="headerBgColor">@color/Cor_Acentuada</item>
+        <item name="headerFontColorSelected">@color/white</item>
+        <item name="headerFontColorNormal">#85FFFFFF</item>
+        <item name="headerTitleColor">#fff</item>
+
+        <item name="dialogActionButtonColor">@color/Cor_Primaria</item>
+    </style>
+</resources>
